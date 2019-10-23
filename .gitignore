@@ -3,5 +3,6 @@
 /generated/
 .metadata
 # eclipse project ignores
-/bin/
-/bin_test/
+*/bin/
+*/bin_test/
+*/generated/
