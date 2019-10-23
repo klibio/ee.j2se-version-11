@@ -1,0 +1,51 @@
+# we know what we do :-)
+-fixupmessages: \
+    "osgi.ee namespace must not be specified with generic capabilities"; is:=ignore,\
+    "private references";is:=ignore
+
+-include: \
+  ${project}/.settings/org.eclipse.jdt.core.prefs,\
+  ${workspace}/io.klib.probe.java/wrk/import_j2see.bnd
+
+javac.source: ${org.eclipse.jdt.core.compiler.source}
+javac.target: ${org.eclipse.jdt.core.compiler.source}
+java.encoding: UTF-8
+
+version=11.0.3.20190416
+
+Bundle-SymbolicName: ee.j2se
+Bundle-Version: ${version}
+Bundle-Description: Contains the Java SE ${substring;${version};0;2} execution environment stubbed classes and sources
+Bundle-DocURL: https://docs.oracle.com/en/java/javase/${substring;${version};0;2}
+
+-outputmask: ${@bsn}_${@version}.jar
+
+-includeresource: \
+  @${fileuri;C:/cec/ENGINE_LIB_DIR/build/java/win32/x86_64/jdk8u222-b10-jre/lib/rt.jar}!/!${j2se.ignorePackages}
+
+-exportcontents: ${j2se.exportcontents}
+
+Provide-Capability: \
+ osgi.ee; osgi.ee="JavaSE"; version:List<Version>="1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 9, 10, 11, 11.1"
+
+# remove Require-Capability - cause we are the JRE bundle ;-)
+-removeheaders: \
+    Require-Capability,\
+    Tool,\
+    ENGINE_LIB_DIR_MASTER,\
+    ENGINE_LIB_DIR,\
+    BUILD_LABEL_PREFIX,\
+    BUILD_WORK_DIR,\
+    ECLIPSE_BIN_DIR,\
+    ECLIPSE_LAUNCHER_VERSION,\
+    ECLIPSE_PDEBUILD_VERSION,\
+    ENGINE_HW_ARCH,\
+    ENGINE_HW_OS,\
+    ENGINE_HW_WS,\
+    ENGINE_RESULT_DIR,\
+    ENGINE_WORK_DIR,\
+    GRADLE_PLUGIN_REPO_DIR,\
+    JAVA6_DIR,\
+    JAVA7_DIR,\
+    JAVA8_DIR,\
+    PUBLISH_URL_ROOT
