@@ -76,13 +76,13 @@ mockito-deps: org.objenesis; version=2.6.0,\
   net.bytebuddy.byte-buddy-agent; version=1.7.9 
 
 Bundle-License:         https://openjdk.java.net/legal/gplv2+ce.html
-Bundle-Vendor:          Kirschners GmbH https://klib.io/
+Bundle-Vendor:          Kirschners GmbH - https://klib.io/
 Bundle-Copyright:       Copyright (c) Kirschners GmbH (2019, ${tstamp;yyyy}) and others. All Rights Reserved.
 Bundle-Developers: \
     peterkir; \
         email=peter@kirschners.de; \
         name="Peter Kirschner"; \
         organization="Kirschers GmbH"; \
-        organizationUrl=https://kirschners.de; \
+        organizationUrl=https://klib.io; \
         roles="architect,developer"; \
         timezone=1

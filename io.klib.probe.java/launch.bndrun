@@ -1,0 +1,22 @@
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-11
+-runvm: '--add-modules=ALL-DEFAULT,ALL-SYSTEM --add-opens java.base/java.lang=ALL-UNNAMED'
+
+-runprogramargs: jrePath=C:/cec/ENGINE_LIB_DIR/build/java/win32/x86_64/openjre11-win-pai-cc
+
+-runprovidedcapabilities: ${native_capability}
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runbundles: \
+	io.klib.probe.java;version='[0.1.0,0.1.1)',\
+	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\
+	org.apache.felix.gogo.runtime;version='[1.0.10,1.0.11)',\
+	org.apache.felix.gogo.shell;version='[1.0.0,1.0.1)',\
+	org.apache.felix.scr;version='[2.1.10,2.1.11)',\
+	jline;version='[2.12.0,2.12.1)'
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	bnd.identity;id='io.klib.probe.java'

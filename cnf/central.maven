@@ -1,2 +1,2 @@
 # List repository contents using GAV coordinates
-
+org.fusesource.jansi:jansi-native:1.8

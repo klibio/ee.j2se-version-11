@@ -1,0 +1,17 @@
+-include: ${project}/.settings/org.eclipse.jdt.core.prefs
+javac.source: ${org.eclipse.jdt.core.compiler.source}
+javac.target: ${org.eclipse.jdt.core.compiler.source}
+java.encoding: UTF-8
+
+-buildpath: \
+	osgi.annotation;version=7.0,\
+	osgi.core;version=7.0,\
+	osgi.cmpn;version=7.0,\
+	org.fusesource.jansi.native;version=1.8,\
+	org.fusesource.jansi
+
+-testpath: \
+	${junit}
+
+Bundle-Version: 0.1.0.${tstamp}
+Private-Package: io.klib.probe.java
