@@ -11,11 +11,11 @@ javac.source: ${org.eclipse.jdt.core.compiler.source}
 javac.target: ${org.eclipse.jdt.core.compiler.source}
 java.encoding: UTF-8
 
-version=11.0.3
+version=11.0.5.${tstamp;yyyyMMdd-HHmmss}
 
 Bundle-SymbolicName: ee.j2se
 Bundle-Version: ${version}
-Bundle-Description: Contains the wrapped PAI Java SE 11.0.3+7 execution environment stubbed classes and sources
+Bundle-Description: Contains the wrapped PAI Java SE 11.0.5+10 execution environment stubbed classes and sources
 Bundle-DocURL: https://docs.oracle.com/en/java/javase/${substring;${version};0;2}
 Creation-Date: ${tstamp;yyyyMMdd-HHmmss}
 

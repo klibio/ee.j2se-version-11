@@ -2,7 +2,7 @@
 -runee: JavaSE-11
 -runvm: '--add-modules=ALL-DEFAULT,ALL-SYSTEM --add-opens java.base/java.lang=ALL-UNNAMED'
 
--runprogramargs: jrePath=C:/cec/ENGINE_LIB_DIR/build/java/win32/x86_64/openjre11-win-pai-cc
+-runprogramargs: jrePath=C:/cec/ENGINE_LIB_DIR/build/java/win32/x86_64/pai-openjdk-11.0.5.10_windows-x64
 
 -runprovidedcapabilities: ${native_capability}
 
